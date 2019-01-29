@@ -12,6 +12,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 
 body>header>h1 {
     font-size: 1.25rem;
@@ -20,14 +24,53 @@ body>header>h1 {
 }
 
 section>header>h2 {
-    font-size: 5rem;
-    position: absolute ;
-    margin: 0;
-    width: calc(100% - 60px);
-    text-align: center;
-    top: calc(50% - 40px);
-    right: 0;
+    width: 100%;
+    position: absolute;
+    top: calc(50% - 40px);   
+}
+/*-- Animaciones --*/
+section>header>h2 span {
+    position: relative;
+    top: 20px;
+    display: inline-block;
+    animation: bounce .3s ease infinite alternate;
     
+    font-size: 5rem;
+    color: #FFF;
+    text-shadow: 0 1px 0 #CCC,
+                 0 2px 0 #CCC,
+                 0 3px 0 #CCC,
+                 0 4px 0 #CCC,
+                 0 5px 0 #CCC,
+                 0 6px 0 transparent,
+                 0 7px 0 transparent,
+                 0 8px 0 transparent,
+                 0 9px 0 transparent,
+                 0 10px 10px rgba(0, 0, 0, .4);
+}
+  
+section>header>h2 span:nth-child(2) { animation-delay: .1s; }
+section>header>h2 span:nth-child(3) { animation-delay: .2s; }
+section>header>h2 span:nth-child(4) { animation-delay: .3s; }
+section>header>h2 span:nth-child(5) { animation-delay: .4s; }
+section>header>h2 span:nth-child(6) { animation-delay: .5s; }
+section>header>h2 span:nth-child(7) { animation-delay: .6s; }
+section>header>h2 span:nth-child(8) { animation-delay: .7s; }
+  
+@keyframes bounce {
+    100% {
+      top: -20px;
+      text-shadow: 0 1px 0 #CCC,
+                   0 2px 0 #CCC,
+                   0 3px 0 #CCC,
+                   0 4px 0 #CCC,
+                   0 5px 0 #CCC,
+                   0 6px 0 #CCC,
+                   0 7px 0 #CCC,
+                   0 8px 0 #CCC,
+                   0 9px 0 #CCC,
+                   0 50px 25px rgba(0, 0, 0, .2);
+    }
 }
 
 header {
@@ -195,9 +238,9 @@ nav ul,nav li {
     margin:0;
     padding:0;
 }
-.main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
-    color:#fff;
-    background-color:#5fa2db;
+.active{
+    color:black;
+    background-color:white;
 }
 .area {
     float: left;
@@ -379,11 +422,11 @@ section#aboutMe>.content-wrapper>iframe{
 
 section#contact {
     background-image: url('../assets/background-contact.jpg');
-    height: 50vh;
+    
 }
 
 section#contact>.content-wrapper{
-    margin-top: 4rem;
+    margin-top: calc(50% - 500px);
 }
 
 /*-- Contact Form --*/
@@ -391,11 +434,18 @@ section#contact>.content-wrapper{
 .contactForm {
     border-radius: 4px;
     box-sizing: border-box;
-    margin: auto;
-    max-width: 450px;
+    position: absolute;
+    left: calc(50% - 330px);
+    top: calc(50% - 400px);
+    width: 690px;
     overflow: hidden;
-    /*SUCESS STYLES*/
+    background-image: url('../assets/yellowNote.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    padding: 110px 100px;
 }
+.contactForm>form{ margin: 40px 0px 0 0; }
 .contactForm .inputContainer {
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -448,6 +498,7 @@ section#contact>.content-wrapper{
 }
 .contactForm .inputContainer textarea {
     margin-bottom: -5px;
+    height: 100px;
 }
 .contactForm .inputContainer input {
     padding-left: 50px;
@@ -708,7 +759,7 @@ footer>aside.social>ul>li {
     /*---*/
 
     section#studies{
-        height: 75vh;
+        height: 90vh;
     }
 
     section#studies>.content-wrapper, section#experience>.content-wrapper{
@@ -723,7 +774,13 @@ footer>aside.social>ul>li {
     /*---*/
     
      section#experience{
-        height: 140vh;      
+        height: 190vh;      
+    }
+    section#contact .contactForm{
+        background-image: none;
+        left: calc(50% - 220px);
+        width: 500px;
+        
     }
      
 

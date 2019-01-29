@@ -21,7 +21,7 @@
         <nav class="main-menu">
             <ul>
                 <li class="has-subnav">
-                    <a class="scroll" href="#home" class="active">
+                    <a class="active scroll" href="#home" >
                         <i class="fas fa-home fa-2x"></i>
                         <span class="nav-text">Home</span>
                     </a>
@@ -63,8 +63,21 @@
     <main>
         <section id="home">
             <header class="home-header">
-                <h2>¡BIENVENIDO!</h2>
-                <p>En este site encontrarán una relación de trabajos y proyectos de índole personal y profesional, todos relacionados con el campo del diseño y la maquetación web.</p>
+                <h2>
+                    <span>¡</span>
+                    <span>B</span>
+                    <span>I</span>
+                    <span>E</span>
+                    <span>N</span>
+                    <span>V</span>
+                    <span>E</span>
+                    <span>N</span>
+                    <span>I</span>
+                    <span>D</span>
+                    <span>O</span>
+                    <span>!</span>
+                </h2>
+                <p>En este site encontrarán un pequeño resumen personal y profesional sobre mi, todos relacionados con el campo del diseño y la maquetación web.</p>
             </header>
         </section>
         <section id="whoIam">
@@ -72,7 +85,7 @@
                 <div class="photo-name">
                     <h2>Jorge Morales Luis</h2>
                     <img src="./assets/jorge.jpg" alt="">
-                    <p>Trabajando desde el 2006, mientras terminaba el Máster de Diseño gráfico y desarrollo Web en la escuela CICE (Madrid), desde entonces he desempeñado mis funciones laborales en el campo del Diseño y enfocando poco a poco mis conocimientos y especializándome en el diseño y desarrollo Web. He trabajado en diferentes empresas, formando parte de grupos de trabajo especializados e individualmente, desempeñando todas las labores que se requieren para elaborar un proyecto de principio a fin. Mi trabajo actual es en la empresa Level5 educación, como maquetador Web</p>
+                    <p>Trabajando desde el 2006, mientras terminaba el Máster de Diseño gráfico y maquetación web en la escuela CICE (Madrid), desde entonces he desempeñado mis funciones laborales en el campo del Diseño y enfocando poco a poco mis conocimientos y especializándome en el diseño y desarrollo Web. He trabajado en diferentes empresas, formando parte de grupos de trabajo especializados e individualmente, desempeñando todas las labores que se requieren para elaborar un proyecto de principio a fin. Mi trabajo actual es en la empresa Level5 educación, como maquetador Web senior</p>
                 </div>    
             </header>
         </section>
@@ -208,40 +221,47 @@
         <section id="contact">
             <div class="content-wrapper">
                 <div id="contactForm" class="contactForm">
-                    <form action="" method="POST" name="contactForm">
+                    <form name="contactForm" id="contactFormID">
                         <ul>
                             <li class="inputContainer">
                                 <label for="userName">
                                     <i class="fa fa-lg fa-fw fa-user"></i>
                                 </label>
-                                <input name="name" id="userName" type="text" placeholder="Nombre">
+                                <input name="name" id="name" type="text" placeholder="Nombre">
                             </li>
 
                             <li class="inputContainer">
                                 <label for="userEmail">
                                     <i class="fa fa-lg fa-fw fa-envelope"></i>
                                 </label>
-                                <input name="email" id="userEmail" type="email" placeholder="Email">
+                                <input name="email" id="email" type="email" placeholder="Email">
                             </li>
+
+                            <li class="inputContainer">
+                                    <label for="userPhone">
+                                        <i class="fa fa-lg fa-fw fa-phone"></i>
+                                    </label>
+                                    <input name="phone" id="phone" type="tel" placeholder="Phone number">
+                                </li>
 
                             <li class="inputRadioSelection">
                                 <p>
                                     <label for="">¿Cómo me has conocido?</label>   
                                 </p>
                                 <p>
-                                    <input class="noCheck" type="radio" id="amigos" name="radio-group" checked>
+                                    <input type="radio" id="amigos" name="radios">
                                     <label for="amigos">Amigos</label>
                                 </p>
                                 <p>
-                                    <input class="noCheck" type="radio" id="internet" name="radio-group">
+                                    <input type="radio" id="internet" name="radios">
                                     <label for="internet">Internet</label>
                                 </p>
                                 <p>
-                                    <input class="noCheck" type="radio" id="bootcamp" name="radio-group">
+                                    <input type="radio" id="bootcamp" name="radios">
                                     <label for="bootcamp">Bootcamp</label>
                                 </p>  
                                 <p>
-                                    <input type="radio" id="otros" name="radio-group">
+                                    <input type="radio" id="otros" name="radios">
                                     <label for="otros">Otros</label>
                                 </p>       
                             </li>
@@ -250,11 +270,11 @@
                                     <label for="userOthers">
                                         <i class="fa fa-lg fa-fw fa-question"></i>
                                     </label>
-                                    <input name="others" id="txtOthers" type="text" placeholder="Otros">
+                                    <input name="others" id="others" type="text" placeholder="Otros">
                                 </li>
 
                             <li class="inputContainer">
-                                <textarea name="feedback" id="userMessage" rows="10" placeholder="Introduzca su mensaje"></textarea>
+                                <textarea name="feedback" id="feedback" rows="10" placeholder="Introduzca su mensaje"></textarea>
                             </li>
                         </ul>
                         <input id="submitBtn" class="submitBtn" type="submit" value="Enviar">
