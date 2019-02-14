@@ -227,21 +227,21 @@
                                 <label for="userName">
                                     <i class="fa fa-lg fa-fw fa-user"></i>
                                 </label>
-                                <input name="name" id="name" type="text" placeholder="Nombre">
+                                <input name="name" id="name" type="text" placeholder="Nombre" required>
                             </li>
 
                             <li class="inputContainer">
                                 <label for="userEmail">
                                     <i class="fa fa-lg fa-fw fa-envelope"></i>
                                 </label>
-                                <input name="email" id="email" type="email" placeholder="Email">
+                                <input name="email" id="email" type="email" placeholder="Email" required>
                             </li>
 
                             <li class="inputContainer">
                                     <label for="userPhone">
                                         <i class="fa fa-lg fa-fw fa-phone"></i>
                                     </label>
-                                    <input name="phone" id="phone" type="tel" placeholder="Phone number">
+                                    <input name="phone" id="phone" type="tel" placeholder="Número de Teléfono">
                                 </li>
 
                             <li class="inputRadioSelection">
@@ -249,32 +249,33 @@
                                     <label for="">¿Cómo me has conocido?</label>   
                                 </p>
                                 <p>
-                                    <input type="radio" id="amigos" name="radios">
+                                    <input class="hideOther" type="radio" id="amigos" name="radios" value="amigos" required>
                                     <label for="amigos">Amigos</label>
                                 </p>
                                 <p>
-                                    <input type="radio" id="internet" name="radios">
+                                    <input class="hideOther"  type="radio" id="internet" name="radios" value="internet">
                                     <label for="internet">Internet</label>
                                 </p>
                                 <p>
-                                    <input type="radio" id="bootcamp" name="radios">
+                                    <input class="hideOther"  type="radio" id="bootcamp" name="radios" value="bootcamp">
                                     <label for="bootcamp">Bootcamp</label>
                                 </p>  
                                 <p>
-                                    <input type="radio" id="otros" name="radios">
+                                    <input type="radio" id="otros" name="radios" value="otros ">
                                     <label for="otros">Otros</label>
                                 </p>       
                             </li>
 
                             <li style="display:none" id="otherOpt" class="inputContainer othersOpt">
-                                    <label for="userOthers">
-                                        <i class="fa fa-lg fa-fw fa-question"></i>
-                                    </label>
-                                    <input name="others" id="others" type="text" placeholder="Otros">
-                                </li>
+                                <label for="userOthers">
+                                    <i class="fa fa-lg fa-fw fa-question"></i>
+                                </label>
+                                <input name="others" id="others" type="text" placeholder="Otros">
+                            </li>
 
                             <li class="inputContainer">
-                                <textarea name="feedback" id="feedback" rows="10" placeholder="Introduzca su mensaje"></textarea>
+                                <div id="tooltip" class="toolTextArea">No se permiten más de 50 palabras, ¡disculpe las molestias!</div>
+                                <textarea name="feedback" id="feedback" rows="10" placeholder="Introduzca su mensaje" required></textarea>
                             </li>
                         </ul>
                         <input id="submitBtn" class="submitBtn" type="submit" value="Enviar">

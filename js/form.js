@@ -25,16 +25,46 @@ export function setForm() {
             if(item.checked){return item.value}
         }
     }
-    
-    // let button = document.getElementById("otros");
-    // let paragraph = document.getElementById("otherOpt");
-    
+    // Show and Hide input "Others"   
+    let button = document.getElementById("otros");
+    let paragraph = document.getElementById("otherOpt");
+    let hideOther = document.getElementsByClassName('hideOther');
+    /*-- Show Input --*/ 
+    button.addEventListener("click", function(){
+        if (paragraph.style.display === 'none') {
+            paragraph.style.display = 'block';
+        }
+    }, false); 
+    /*-- Hide Input --*/
+    for(let i = 0; i < hideOther.length; i++ ){
+        var aNode = hideOther[i];
+        aNode.addEventListener("click", function(){
+            if (paragraph.style.display === 'block') {
+                paragraph.style.display = 'none';
+            }
+        }, false); 
+    }
 
-    // button.addEventListener("click", function(){
-    //     if (paragraph.style.display == 'none') {
-    //         paragraph.style.display = 'block';
-    //     } else {
-    //         paragraph.style.display = 'none';
-    //     }
-    // }, false);
-}    
+    // Limit text area words  
+    let textArea = document.getElementById('feedback'); 
+    textArea.addEventListener('keyup', calculate);
+    
+    function calculate(event) {
+        let tooltip = document.getElementById('tooltip');
+        let x = event.keyCode;
+        let string = document.querySelector('#feedback').value;
+        let length = string.split(/[^\s]+/).length - 1;
+        if (x === 32) {
+            if(length >= 50){
+                tooltip.style.display = 'block';
+                textArea.style.color = 'red';
+            } 
+        } 
+        else if( x === 8){
+            if(length < 50){
+                tooltip.style.display = 'none'; 
+                textArea.style.color = 'black';
+            }
+        }
+    };
+}   

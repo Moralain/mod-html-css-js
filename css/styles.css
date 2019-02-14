@@ -446,12 +446,48 @@ section#contact>.content-wrapper{
     padding: 110px 100px;
 }
 .contactForm>form{ margin: 40px 0px 0 0; }
+/*----*/
+.toolTextArea{
+    position: absolute; 
+    width: 100%;
+    height: 40px;
+    top: -50px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    line-height: 35px;
+    display: none;
+}
+
+.toolTextArea:after, .toolTextArea:before {
+	top: 100%;
+	left: 10%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.toolTextArea:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #ffffff;
+	border-width: 8px;
+	margin-left: -8px;
+}
+.toolTextArea:before {
+	border-color: rgba(0, 0, 0, 0);
+	border-top-color: #000000;
+	border-width: 9px;
+	margin-left: -9px;
+}
+/*----*/
 .contactForm .inputContainer {
     border: 1px solid #ccc;
     border-radius: 3px;
     position: relative;
     margin-bottom: 5px;
-    overflow: hidden;
     background: transparent;
 }
 .contactForm .inputContainer .message {
